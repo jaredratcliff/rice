@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+  </head>
+
+<style>
+    /*SECTION ONE : The following code defines the values of variable colors throughout the page.*/
+    :root {
+      --primary-color: #fff; /*#1e73be*/
+      --primary-contrast-color: black; /*this should be a neutral color that contrasts with the "--primary-color". If the primary color is dark, this should be white; if the primary color is light, this should be black.*/
+      --secondary-color: #60A8E6;
+      --secondary-contrast-color: white;
+	  --third-color: #F0F4EF;
+      --third-contrast-color: black;
+    } /*To include these colors in other CSS, instead of a color name or hex code, write "var(--primary-color)", without quotes. Include the name of the variable color you want. Example: "color: var(--primary-color);" */
+    /*For a listing of all recognized CSS colors, visit this link: https://www.w3schools.com/cssref/css_colors.asp // For an explanation of variable colors, go here: https://www.geeksforgeeks.org/how-to-define-colors-as-variables-in-css/ */
+    
+    /*SECTION TWO : This code defines class and id styles throughout the document.*/
+    .medium-black-border {
+      border-color: black;
+      border-width: 10px;
+      border-style: solid;
+      border-radius: 0px;
+    }
+    .page {
+      
+    }
+    .content {
+      background-color: var(--third-color);
+      background-image: url("happy-elephant.gif");
+  		background-position: left; /* Center the image */
+  		background-repeat: no-repeat; /* Do not repeat the image */
+  		background-size: cover; /* Resize the background image to cover the entire container */
+      border-style: solid;
+      border-color: var(--primary-color);
+      border-radius: 0px; /*curves the border corners*/
+    }
+	.alert {
+		background-color: #f1bcbd;
+		border-style: solid;
+		border-color: #c1292e;
+		border-width: 6px;
+	}
+	@media (min-width: 767px) {
+	.content {
+		padding: 50px; /*inside the section*/
+		margin: 50px; /*outside the section*/
+		border-width: 8px;
+	}
+	.alert {
+		padding: 25px;
+	}
+	}
+	@media (max-width: 766px) {
+	.content {
+		padding: 20px; /*inside the section*/
+		margin: 20px; /*outside the section*/
+		border-width: 8px;
+	}
+	.alert {
+		padding: 10px;
+	}
+	}
+      
+    
+    /*SECTION THREE : The rest of the style code is general CSS that styles the page.*/
+    
+  * {
+  transition: background 250ms ease-in-out, color 250ms ease-in-out;
+  }
+    p, ol, ul, * {
+	  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  	 color: var(--third-contrast-color)
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--primary-color);
+	  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+  	button {
+  font-weight: bold;
+  border-radius: 60px;
+  border-width: 0px;
+  padding-top: 15px;
+  padding-right: 33px;
+  padding-bottom: 15px;
+  padding-left: 33px;
+  border-style: solid;
+  color: var(--primary-contrast-color);
+  background-color: var(--primary-color);
+  	}
+  button:hover {
+  background-color: var(--secondary-color)
+  }
+  button:disabled, button[disabled] {
+  	color: white;
+	background-color: lightgrey;
+  }
+    img {
+      /*filter: invert(100%)*/
+      width: 200px;
+    }
+    ::-moz-selection { /* Code for Firefox */
+      color: var(--primary-contrast-color);
+      background: var(--primary-color);
+    }
+    ::selection {
+      color: var(--primary-contrast-color);
+      background: var(--primary-color);
+    }
+    /*This next block sets a special font for all characters in the Khmer unicode block*/
+    @font-face {
+    font-family: Nokora;
+    src: url('https://fonts.googleapis.com/css2?family=Nokora&display=swap');
+    unicode-range: U+1780-17FF;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+	    font-family: Nokora, inherit;
+    }
+	/*p {font-size: 16px;}
+	h1 {font-size: 32px;}
+	h2 {font-size: 24px;}
+	h3 {font-size: 18.72px;}
+	h4 {font-size: 16px;}
+	h5 {font-size: 13.28px;}
+	h6 {font-size: 12px;}*/
+	
+}
+</style>
+<body style="background-color: #7C809D">
+  <div class=page>
+    <div class=content>
+      <img src="congratulations.png" style="width: 500px;"</img>
+      <br>
+  		<h1>Great job!</h1>
+      <h1>ធ្វើ​បាន​ល្អ!</h1>
+  		<br>
+  		<p style="font-weight: bold;">You successfully completed this task.<br>អ្នកបានបញ្ចប់កិច្ចការនេះដោយជោគជ័យ។</p>
+  		<br><br><br><br>
+		<!--
+		<div class=alert>
+		<p​ style="font-weight: bold;">The grading system will be unavailable from Friday afternoon until Monday morning.<br>ប្រព័ន្ធនេះនឹងមិនអាចប្រើបានចាប់ពីរសៀលថ្ងៃសុក្ររហូតដល់ព្រឹកថ្ងៃច័ន្ទ។</p>
+		</div>
+		<br>
+		-->
+ 
+    </div>
+  </div>
+</body>
+</html>
